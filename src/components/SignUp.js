@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import { firebaseApp } from "../Firebase";
+import { Link } from 'react-router-dom';
+
+// Don't forget to update styles
 
 class SignUp extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    error: {
+      message: ""
+    }
   };
 
   signUp() {
@@ -13,24 +19,26 @@ class SignUp extends Component {
     firebaseApp
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .catch(err => {
-        console.log(`Error, ${err}`);
+      .catch(error => {
+        this.setState({ error });
       });
   }
   render() {
     return (
-      <div className="form-inline">
+      <div className="form-inline" style={{ margin: "15%" }}>
         <h2>Sign Up</h2>
         <div className="form-group">
           <input
             onChange={e => this.setState({ email: e.target.value })}
             type="text"
+            style={{ margin: "5px" }}
             className="form-control"
             placeholder="email"
           />
           <input
             onChange={e => this.setState({ password: e.target.value })}
             type="password"
+            style={{ margin: "5px" }}
             className="form-control"
             placeholder="password"
           />
@@ -42,6 +50,10 @@ class SignUp extends Component {
         >
           Sign Up
         </button>
+        <div>{this.state.error.message}</div>
+        <div>
+          <Link to="/signin">Already a user? Sign in instead.</Link>
+        </div>
       </div>
     );
   }

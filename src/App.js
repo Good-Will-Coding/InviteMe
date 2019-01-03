@@ -3,7 +3,7 @@ import "./App.css";
 import Landing from "./components/Landing";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
 import { firebaseApp } from "./Firebase";
 
 firebaseApp.auth().onAuthStateChanged(user => {
@@ -28,4 +28,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

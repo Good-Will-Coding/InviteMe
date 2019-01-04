@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { firebaseApp } from '../Firebase';
 import { connect } from 'react-redux';
 import AddInvite from './AddInvite';
+import InviteList from './InviteList';
 class Main extends Component {
 
 
@@ -15,7 +16,7 @@ class Main extends Component {
       <div>
         <h3>Invites</h3>
         <AddInvite />
-        <div>Invite List</div>
+        <InviteList />
         <button className="btn btn-danger" onClick={() => this.signOut()}> 
         Sign Out
         </button>
@@ -25,7 +26,7 @@ class Main extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log('state', state);
+  // console.log('state', state);
   return {}
 }
 

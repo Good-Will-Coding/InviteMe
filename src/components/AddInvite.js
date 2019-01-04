@@ -10,7 +10,7 @@ class AddInvite extends Component {
   addInvite() {
     console.log("this", this);
     const { title } = this.state;
-    const { email } = this.props;
+    const { email } = this.props.user;
     inviteRef.push({ email, title });
   }
   render() {
@@ -38,9 +38,9 @@ class AddInvite extends Component {
 }
 
 const mapStateToProps = state => {
-  const { email } = state;
+  const { user } = state;
   return {
-    email
+    user
   };
 };
 

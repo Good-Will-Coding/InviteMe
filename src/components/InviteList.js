@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { inviteRef } from "../Firebase";
 import { setInvites } from "../actions/index";
 import { connect } from "react-redux";
+import InviteItem from './InviteItem';
 
 class InviteList extends Component {
   componentDidMount() {
@@ -15,9 +16,16 @@ class InviteList extends Component {
       this.props.setInvites(invites);
     });
   }
+
   render() {
     console.log("Invites from store:", this.props.invites);
-    return <div>Invite List</div>;
+    return (
+      this.props.invites.map((invite, index) => {
+        return (
+          <InviteItem key={index} invite={invite} />
+        )
+      })
+    );
   }
 }
 

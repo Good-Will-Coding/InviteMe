@@ -13,3 +13,5 @@ const config = {
 export const firebaseApp = firebase.initializeApp(config);
 
 export const inviteRef = firebase.database().ref("invites");
+export const acceptedInvitationRef = firebase.database().ref("acceptInvite");
+export const deniedInvitationRef = firebase.database().ref("denyInvite");

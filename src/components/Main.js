@@ -3,6 +3,8 @@ import { firebaseApp } from '../Firebase';
 import { connect } from 'react-redux';
 import AddInvite from './AddInvite';
 import InviteList from './InviteList';
+import AcceptedList from './AcceptedList';
+
 class Main extends Component {
 
 
@@ -14,14 +16,16 @@ class Main extends Component {
   render() {
     return (
       <div style={{margin: '5px'}}>
-        <h3>InviteMe</h3>
+        <h3>InviteMe <button className="btn btn-danger" onClick={() => this.signOut()}> 
+        Sign Out
+        </button></h3>
         <AddInvite />
         <hr/>
         <h4>Invites</h4>
         <InviteList />
-        <button className="btn btn-danger" onClick={() => this.signOut()}> 
-        Sign Out
-        </button>
+        <h4>Who's Going?</h4>
+        <AcceptedList />
+        
       </div>
     )
   }

@@ -10,9 +10,9 @@ class InviteList extends Component {
       let invites = [];
       items.forEach(invite => {
         const { email, title } = invite.val();
-        invites.push({ email, title });
+        const fbKey = invite.key;
+        invites.push({ email, title, fbKey });
       });
-      console.log("Invites", invites);
       this.props.setInvites(invites);
     });
   }

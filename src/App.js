@@ -1,25 +1,18 @@
 import React, { Component } from "react";
 import "./App.css";
-import Landing from "./components/Landing";
+import Main from "./components/Main";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
-import { firebaseApp } from "./Firebase";
 
-firebaseApp.auth().onAuthStateChanged(user => {
-  if (user) {
-    console.log("User has signed in or up", user);
-  } else {
-    console.log("User has signed out or still needs to sign in");
-  }
-});
+
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/" component={Main} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
         </div>

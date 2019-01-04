@@ -9,4 +9,7 @@ const config = {
         messagingSenderId: "333781711475"
 }
 
+
 export const firebaseApp = firebase.initializeApp(config);
+
+export const inviteRef = firebase.database().ref("invites");

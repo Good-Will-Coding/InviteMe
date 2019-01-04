@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { firebaseApp } from '../Firebase';
-import { Link } from "react-router-dom";
- class Landing extends Component {
+import { connect } from 'react-redux';
+import AddInvite from './AddInvite';
+class Main extends Component {
 
 
   signOut() {
@@ -12,7 +13,9 @@ import { Link } from "react-router-dom";
   render() {
     return (
       <div>
-        Landing
+        <h3>Invites</h3>
+        <AddInvite />
+        <div>Invite List</div>
         <button className="btn btn-danger" onClick={() => this.signOut()}> 
         Sign Out
         </button>
@@ -21,4 +24,9 @@ import { Link } from "react-router-dom";
   }
 }
 
-export default Landing;
+const mapStateToProps = state => {
+  console.log('state', state);
+  return {}
+}
+
+export default connect(mapStateToProps)(Main);

@@ -11,7 +11,6 @@ class AcceptedList extends Component {
         const { email, title } = acceptedInvite.val();
         acceptedInvites.push({ email, title });
       });
-
       console.log("Accepted invis", acceptedInvites);
       this.props.setAcceptedInvite(acceptedInvites);
     });

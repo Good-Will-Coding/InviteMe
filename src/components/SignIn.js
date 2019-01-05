@@ -22,7 +22,7 @@ class SignIn extends Component {
       .catch(error => {
         this.setState({ error });
       });
-    this.props.history.push("/");
+    this.props.history.push("/invites");
   }
   render() {
     return (

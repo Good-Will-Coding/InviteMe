@@ -18,7 +18,6 @@ class InviteList extends Component {
   }
 
   render() {
-    console.log("Invites from store:", this.props.invites);
     return (
       this.props.invites.map((invite, index) => {
         return (

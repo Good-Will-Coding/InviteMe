@@ -3,15 +3,15 @@ import { inviteRef, acceptedInvitationRef, deniedInvitationRef } from '../Fireba
 import { connect } from 'react-redux';
 
 class InviteItem extends Component {
-    acceptInvite() {
+    acceptInvite = () => {
         // Add to accepted on database
         const { email } = this.props.user;
         const { title, fbKey } = this.props.invite;
-        inviteRef.child(fbKey).remove();
+        // inviteRef.child(fbKey).remove();
         acceptedInvitationRef.push({email, title});
     }
 
-    denyInvite() {
+    denyInvite = () => {
         // Add user and invite to not going
         const { email } = this.props.user;
         const { title, fbKey } = this.props.invite;
@@ -26,8 +26,8 @@ class InviteItem extends Component {
       <div style={{margin: '5px'}}>
       <strong>{title}</strong>
       <span> Submitted by <em>{email}</em></span>
-  <button onClick={() => {this.acceptInvite()}} style={{margin: '5px'}} className="btn btn-sm btn-primary">I'm Going!</button>
-  <button onClick={() => {this.denyInvite()}} className="btn btn-sm btn-warning">Nah.</button>
+  <button onClick={this.acceptInvite} style={{margin: '5px'}} className="btn btn-sm btn-primary">I'm Going!</button>
+  <button onClick={this.denyInvite} className="btn btn-sm btn-warning">Nah.</button>
    </div>
     )
   }

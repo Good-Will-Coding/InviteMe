@@ -6,9 +6,9 @@ import InviteItem from './InviteItem';
 
 class InviteList extends Component {
   componentDidMount() {
-    inviteRef.on("value", items => {
+    inviteRef.on("value", snap => {
       let invites = [];
-      items.forEach(invite => {
+      snap.forEach(invite => {
         const { email, title } = invite.val();
         const fbKey = invite.key;
         invites.push({ email, title, fbKey });

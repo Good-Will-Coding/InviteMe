@@ -7,7 +7,7 @@ class AddInvite extends Component {
     title: ""
   };
 
-  addInvite() {
+  addInvite = () => {
     console.log("this", this);
     const { title } = this.state;
     const { email } = this.props.user;
@@ -25,7 +25,7 @@ class AddInvite extends Component {
             onChange={e => this.setState({ title: e.target.value })}
           />
           <button
-            onClick={() => this.addInvite()}
+            onClick={this.addInvite}
             className="btn btn-succes"
             type="button"
           >

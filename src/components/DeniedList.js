@@ -3,6 +3,8 @@ import { deniedInvitationRef } from "../Firebase";
 import { connect } from "react-redux";
 import { setDeniedInvite } from "../actions";
 
+import "./styles/deniedList.css";
+
 class DeniedList extends Component {
   componentDidMount() {
     deniedInvitationRef.on("value", snap => {
@@ -20,8 +22,8 @@ class DeniedList extends Component {
         {this.props.deniedInvites.map((deniedInvite, index) => {
           const { title, email } = deniedInvite;
           return (
-            <div key={index}>
-              <strong>{title}</strong>, Invitation declined by <em>{email}</em>
+            <div className="denied-color" key={index}>
+              <strong id="strong-denied">{title}</strong>, Invitation declined by <em>{email}</em>
             </div>
           );
         })}

@@ -3,6 +3,8 @@ import { acceptedInvitationRef } from "../Firebase";
 import { connect } from "react-redux";
 import { setAcceptedInvite } from "../actions/index";
 
+import "./styles/acceptedList.css";
+
 class AcceptedList extends Component {
   componentDidMount() {
     acceptedInvitationRef.on("value", snap => {
@@ -20,8 +22,8 @@ class AcceptedList extends Component {
         {this.props.acceptedInvites.map((acceptedInvite, index) => {
           const { title, email } = acceptedInvite;
           return (
-            <div key={index}>
-              <strong>{title}</strong>, Invitation accepted by <em>{email}</em>
+            <div class="accepted-color" key={index}>
+              <strong id="strong-color">{title}</strong> - Invitation accepted by <em>{email}</em>
             </div>
           );
         })}

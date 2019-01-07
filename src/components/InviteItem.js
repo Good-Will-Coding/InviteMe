@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { inviteRef, acceptedInvitationRef, deniedInvitationRef } from '../Firebase';
 import { connect } from 'react-redux';
 
+import './styles/inviteItem.css';
+
 class InviteItem extends Component {
     acceptInvite = () => {
         // Add to accepted on database
@@ -26,11 +28,13 @@ class InviteItem extends Component {
       const { email, title } = this.props.invite;
     return (
       <div style={{margin: '5px'}}>
+      <div className="color-white">
       <strong>{title}</strong>
       <span> Submitted by <em>{email}</em></span>
-  <button onClick={this.acceptInvite} style={{margin: '5px'}} className="btn btn-sm btn-primary">I'm Going!</button>
-  <button onClick={this.denyInvite} style={{margin: '2px'}} className="btn btn-sm btn-warning">Nah.</button>
-  <button onClick={this.removeInvite} style={{margin: '2px'}} className="btn btn-sm btn-danger">X</button>
+      </div>
+  <button onClick={this.acceptInvite} style={{margin: '5px'}} className="btn btn-sm btn-light">I'm Going!</button>
+  <button onClick={this.denyInvite} style={{margin: '2px'}} className="btn btn-sm btn-info">Nah.</button>
+  <button onClick={this.removeInvite} style={{margin: '2px'}} className="btn btn-sm btn-danger">Remove</button>
    </div>
     )
   }

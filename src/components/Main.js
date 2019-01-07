@@ -6,6 +6,7 @@ import InviteList from './InviteList';
 import AcceptedList from './AcceptedList';
 import DeniedList from './DeniedList';
 
+import './styles/main.css';
 
 class Main extends Component {
 
@@ -18,9 +19,10 @@ class Main extends Component {
   render() {
     return (
       <div style={{margin: '45px'}}>
-        <h3>InviteMe <button className="btn btn-danger" onClick={() => this.signOut()}> 
+      <img src="https://i.ibb.co/7VP9C6h/love-letter-1.png" alt=""/>
+        <h1>InviteMe <button className="btn btn-danger" onClick={() => this.signOut()}> 
         Sign Out
-        </button></h3>
+        </button></h1>
         <AddInvite />
         <hr/>
         <h4>Invites</h4>

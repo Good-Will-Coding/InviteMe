@@ -26,10 +26,10 @@ class AddInvite extends Component {
           />
           <button
             onClick={this.addInvite}
-            className="btn btn-succes"
+            className="btn btn-success"
             type="button"
           >
-            Submit
+            Invite
           </button>
         </div>
       </div>

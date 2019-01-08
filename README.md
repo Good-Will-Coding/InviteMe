@@ -13,7 +13,7 @@ https://inviteme.netlify.com/
 
 - User will be prompted to sign in or sign up for a new account.
 - Click sign up or use example username: `billy@inviteme.com` and password `password`.
-- Login will direct to main app page
+- Login will direct to main app page.
 - User is able to add invite, decline with a "nah", or remove invite.
 
 

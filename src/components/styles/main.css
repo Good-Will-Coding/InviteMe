@@ -1,7 +1,20 @@
 h1 {
     color: #07113A;
+    padding-bottom: 50px;
 }
 
 h4 {
     color: white;
+}
+
+.div-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    
 }

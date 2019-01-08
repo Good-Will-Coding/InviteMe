@@ -18,7 +18,7 @@ class Main extends Component {
   }
   render() {
     return (
-      <div style={{margin: '45px'}}>
+      <div className="div-center" style={{margin: '45px'}}>
       <img src="https://i.ibb.co/7VP9C6h/love-letter-1.png" alt=""/>
         <h1>InviteMe <button className="btn btn-danger" onClick={() => this.signOut()}> 
         Sign Out

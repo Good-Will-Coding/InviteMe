@@ -27,7 +27,7 @@ class InviteItem extends Component {
   render() {
       const { email, title } = this.props.invite;
     return (
-      <div style={{margin: '5px'}}>
+      <div className="invite-align" style={{margin: '5px'}}>
       <div className="color-white">
       <strong>{title}</strong>
       <span> Submitted by <em>{email}</em></span>

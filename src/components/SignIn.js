@@ -14,6 +14,7 @@ class SignIn extends Component {
     }
   };
 
+  // User signs in
   signIn() {
     console.log("this.state", this.state);
     const { email, password } = this.state;
@@ -28,9 +29,11 @@ class SignIn extends Component {
   render() {
     return (
       <div className="form-inline" style={{ margin: "15%" }}>
-        <img src="https://i.ibb.co/6FTFLMT/love-letter.png" alt=""/>
+        <img src="https://i.ibb.co/6FTFLMT/love-letter.png" alt="" />
         <h1>InviteMe</h1>
-        <span><p>Say goodbye to "You never invited me".</p></span>
+        <span>
+          <p>Say goodbye to, "You never invited me!"</p>
+        </span>
         <h2>Sign In</h2>
         <div className="form-group">
           <input
@@ -57,7 +60,9 @@ class SignIn extends Component {
         </button>
         <div>{this.state.error.message}</div>
         <div>
-          <Link id="link-color" to="/signup">Sign up instead</Link>
+          <Link id="link-color" to="/signup">
+            Sign up instead
+          </Link>
         </div>
       </div>
     );
@@ -65,4 +70,3 @@ class SignIn extends Component {
 }
 
 export default SignIn;
-

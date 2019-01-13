@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { firebaseApp } from "../Firebase";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import './styles/signUp.css';
+import "./styles/signUp.css";
 
 // Don't forget to update styles
 
@@ -15,6 +15,7 @@ class SignUp extends Component {
     }
   };
 
+  // User signs up
   signUp() {
     console.log("this.state", this.state);
     const { email, password } = this.state;
@@ -28,7 +29,7 @@ class SignUp extends Component {
   render() {
     return (
       <div className="form-inline" style={{ margin: "15%" }}>
-        <img src="https://i.ibb.co/19Qjw5b/invitation.png" alt=""/>
+        <img src="https://i.ibb.co/19Qjw5b/invitation.png" alt="" />
         <h2>Sign Up</h2>
         <div className="form-group">
           <input
@@ -55,7 +56,9 @@ class SignUp extends Component {
         </button>
         <div>{this.state.error.message}</div>
         <div>
-          <Link id="link-color" to="/signin">Already a user? Sign in instead.</Link>
+          <Link id="link-color" to="/">
+            Already a user? Sign in instead.
+          </Link>
         </div>
       </div>
     );

@@ -16,6 +16,9 @@ class DeniedList extends Component {
       this.props.setDeniedInvite(deniedInvites);
     });
   }
+
+  // Add in callback for not going button!
+  
   render() {
     return (
       <div>
@@ -24,6 +27,7 @@ class DeniedList extends Component {
           return (
             <div className="denied-color" key={index}>
               <strong id="strong-denied">{title}</strong>, Invitation declined by <em>{email}</em>
+              <button onClick={this.removeAcceptedInvite} style={{ margin: "10px"}} className="btn-danger">X</button>            
             </div>
           );
         })}

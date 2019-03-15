@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { deniedInvitationRef } from "../Firebase";
+import { deniedInvitationRef, inviteRef } from "../Firebase";
 import { connect } from "react-redux";
 import { setDeniedInvite } from "../actions";
 
@@ -18,6 +18,7 @@ class DeniedList extends Component {
   }
 
   // Add in callback for not going button!
+ 
   
   render() {
     return (
@@ -27,7 +28,7 @@ class DeniedList extends Component {
           return (
             <div className="denied-color" key={index}>
               <strong id="strong-denied">{title}</strong> - Invitation declined by <em>{email}</em>
-              <button onClick={this.removeAcceptedInvite} style={{ margin: "10px"}} className="btn-danger">X</button>            
+              {/* <button onClick={this.removeInvite} style={{ margin: "10px"}} className="btn-danger">X</button>             */}
             </div>
           );
         })}

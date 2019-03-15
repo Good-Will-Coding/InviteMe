@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { acceptedInvitationRef, inviteRef } from "../Firebase";
+import { acceptedInvitationRef } from "../Firebase";
 import { connect } from "react-redux";
 import { setAcceptedInvite } from "../actions/index";
 
@@ -26,9 +26,9 @@ class AcceptedList extends Component {
         {this.props.acceptedInvites.map((acceptedInvite, index) => {
           const { title, email } = acceptedInvite;
           return (
-            <div class="accepted-color" key={index}>
+            <div className="accepted-color" key={index}>
               <strong id="strong-color">{title}</strong> - Invitation accepted by <em>{email}</em>
-            <button onClick={this.removeAcceptedInvite} style={{ margin: "10px"}} className="btn-danger">X</button>
+            {/* <button onClick={this.removeAcceptedInvite} style={{ margin: "10px"}} className="btn-danger">X</button> */}
             </div>
           );
         })}

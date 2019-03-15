@@ -4,15 +4,20 @@ import { inviteRef } from "../Firebase";
 
 class AddInvite extends Component {
   state = {
-    title: ""
+    title: "",
+    disabledButton: false
   };
 
   addInvite = () => {
-    console.log("this", this);
-    const { title } = this.state;
-    const { email } = this.props.user;
-    inviteRef.push({ email, title });
-  }
+    if (this.state.title === "") {
+      this.setState({ disabledButton: !this.state.disabledButton });
+    } else {
+      const { title } = this.state;
+      const { email } = this.props.user;
+      inviteRef.push({ email, title });
+      this.setState({ title: "" });
+    }
+  };
   render() {
     return (
       <div className="form-inline">
@@ -22,12 +27,15 @@ class AddInvite extends Component {
             placeholder="Add an invite"
             className="form-control"
             style={{ marginRight: "5px" }}
-            onChange={e => this.setState({ title: e.target.value })}
+            onChange={e =>
+              this.setState({ title: e.target.value, disabledButton: false })
+            }
           />
           <button
             onClick={this.addInvite}
             className="btn btn-success"
             type="button"
+            disabled={this.state.disabledButton}
           >
             Invite
           </button>

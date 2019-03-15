@@ -19,6 +19,19 @@ img {
 }
 
 .main-container {
+    border-radius: 4px;
     background: #1e2020;
     box-shadow: rgb(51, 45, 45) 10px 5px;
+}
+
+.accepted {
+    display: flex;
+    justify-content: center;
+    background: rgb(77, 175, 82);
+    margin: 50px;
+}
+
+.accepted-color {
+    padding-top: 2%;
+    margin-bottom:2%;
 }

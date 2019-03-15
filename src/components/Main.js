@@ -29,7 +29,9 @@ class Main extends Component {
         <h4>Invites</h4>
         <InviteList />
         <h4>Who's Going?</h4>
+        <div className="accepted">
         <AcceptedList />
+        </div>
         <hr/>
         <h4>Nah.</h4>
         <DeniedList/>

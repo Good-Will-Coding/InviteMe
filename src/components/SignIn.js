@@ -29,11 +29,15 @@ class SignIn extends Component {
   render() {
     return (
       <div className="form-inline" style={{ margin: "15%" }}>
+      <div className="header">
         <img src="https://i.ibb.co/6FTFLMT/love-letter.png" alt="" />
         <h1>InviteMe</h1>
+        </div>
+
         <span>
-          <p>Say goodbye to, "You never invited me!"</p>
+          <p>Say goodbye to "You never invited me!"</p>
         </span>
+        <div className="container">
         <h2>Sign In</h2>
         <div className="form-group">
           <input
@@ -63,6 +67,7 @@ class SignIn extends Component {
           <Link id="link-color" to="/signup">
             Sign up instead
           </Link>
+          </div>
         </div>
       </div>
     );

@@ -4,18 +4,37 @@ body {
 
 h1 {
     color: #07113A;
+    font-size: 8rem;
 }
+
 h2 {
-    color: white;
+    color: rgb(8, 7, 7);
 }
 
 span p {
     color: #172457;
-    font-size: 15px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 
 #link-color {
-    color: white;
+    color: rgb(33, 29, 37);
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: #82ccdd;
+    box-shadow: 5px 10px;
+    border-radius: 4px;
+    max-width: 400px;
+}
+
+img {
+    width: 10%;
+    height: 5%;
+}

@@ -26,7 +26,7 @@ class DeniedList extends Component {
           const { title, email } = deniedInvite;
           return (
             <div className="denied-color" key={index}>
-              <strong id="strong-denied">{title}</strong>, Invitation declined by <em>{email}</em>
+              <strong id="strong-denied">{title}</strong> - Invitation declined by <em>{email}</em>
               <button onClick={this.removeAcceptedInvite} style={{ margin: "10px"}} className="btn-danger">X</button>            
             </div>
           );

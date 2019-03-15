@@ -4,7 +4,7 @@ h1 {
 }
 
 h4 {
-    color: white;
+    color: rgb(236, 231, 231);
 }
 
 .div-center {
@@ -16,4 +16,9 @@ h4 {
 
 img {
     width: 100px;
+}
+
+.main-container {
+    background: #1e2020;
+    box-shadow: rgb(51, 45, 45) 10px 5px;
 }

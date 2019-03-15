@@ -25,13 +25,15 @@ class Main extends Component {
         </button></h1>
         <AddInvite />
         <hr/>
+        <div className="main-container">
         <h4>Invites</h4>
         <InviteList />
         <h4>Who's Going?</h4>
         <AcceptedList />
         <hr/>
         <h4>Nah.</h4>
-        <DeniedList/>           
+        <DeniedList/>
+        </div>           
       </div>
     )
   }
